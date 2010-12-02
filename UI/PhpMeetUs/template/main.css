@@ -1,0 +1,532 @@
+body{
+    background-color:#FFFFFF;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+#page{
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    width: 70%;
+    float: left;
+}
+#mainframe {
+    height: 100%;
+}
+/*#rightcontent {
+    background-color:#FBB117;
+    border:2px solid #000000;
+    list-style-image: url(./images/calendar.png); 
+    position:relative;
+    top:1px;
+    right:164px;
+    padding:5px;
+    line-height:12px;
+ Again, the ugly brilliant hack. 
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    width:23%;
+    float: right;
+    height: 100%;
+}*/
+#rightcontent {
+    background-color:#4FACFF;
+    border:0 solid #000000;
+    float:right;
+    height:50%;
+    line-height:12px;
+    list-style-image:url("./images/calendar.png");
+    padding:1px;
+    position:absolute;
+    right:40px;
+    voice-family:inherit;
+    width:27%;
+}
+
+#rightcontent p{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:14px;
+}
+/*
+#leftcontent {
+    background-color:#FFFFFF;
+    border:2px solid #000000;
+    position:relative;
+    top:1px;
+    right:0px;
+    width:172px;
+    padding:5px;
+    line-height:12px;
+ Again, the ugly brilliant hack. 
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    width:55%;
+    float: left;
+    height: 100%;
+}*/
+#leftcontent {
+    background-color:#FFFFFF;
+    border:0px solid #000000;
+    float:left;
+    height:49%;
+    line-height:12px;
+    padding:5px;
+    position:relative;
+    right:0;
+    voice-family:inherit;
+    width:92%;
+}
+#formdetails{
+    width:70%;
+    margin-left: 80px;
+}
+#detailsnext{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+    margin-left: 209px;
+}
+#datesnext{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+    margin-left: 190px;
+    
+}
+#date3 {
+    margin:0;
+    padding:0;
+    width:200px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+#map {
+    width: 500px;
+    height: 346px;
+    position: relative;
+    background-color: rgb(229, 227, 223);
+}
+#leftcontent p{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:14px;
+    text-align: left;
+}
+#leftcontent input.organizebutton{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+
+}
+/*#leftcontent input.next{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+}*/
+
+/*^'^ Navigation Structure ^'^*/
+.nav-container-outer{
+background: #990000;
+padding: 0px;
+height: 74px;
+width: 720px;
+background: url(./images/nav-bg2.jpg);
+}
+.float-left{
+float: left;
+}
+.float-right{
+float: right;
+}
+.nav-container .divider{
+display:block;
+font-size:1px;
+border-width:0px;
+border-style:solid;
+}
+.nav-container .divider-vert{
+float:left;
+width:0px;
+display: none;
+}
+/*.nav-container .item-secondary-title{
+display:block;
+cursor:default;
+white-space:nowrap;
+}*/
+.clear{
+font-size:1px;
+height:0px;
+width:0px;
+clear:left;
+line-height:0px;
+display:block;
+float:none;
+}
+.nav-container{
+position:relative;
+zoom:1;
+margin: 0 auto;
+}
+.nav-container a, .nav-container li{
+float:left;
+display:block;
+white-space:nowrap;
+}
+.nav-container div a, .nav-container ul a, .nav-container ul li{
+float:none;
+}
+.nav-container ul{
+left:-10000px;
+position:absolute;
+}
+.nav-container, .nav-container ul{
+list-style:none;
+padding:0px;
+margin:0px;
+}
+.nav-container li a{
+float:none
+}
+.nav-container li{
+position:relative;
+}
+.nav-container ul{
+z-index:10;
+}
+.nav-container ul ul{
+z-index:20;
+}
+.nav-container ul ul ul{
+z-index:30;
+}
+.nav-container ul ul ul ul{
+z-index:40;
+}
+.nav-container ul ul ul ul ul{
+z-index:50;
+}
+li:hover>ul{
+left:auto;
+}
+#nav-container ul {
+top:100%;
+}
+#nav-container ul li:hover>ul{
+top:0px;
+left:100%;
+}
+
+/*^'^ Primary Items ^'^*/
+#nav-container a{
+padding:7px 17px 7px 18px;
+margin: 10px 0px 0px 0px;
+color: black;
+font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+font-size:14px;
+text-decoration:none;
+font-weight: bold;
+background: url(./images/item-primary-bg.gif);
+background-repeat: no-repeat;
+background-position: top;
+}
+
+#nav-container a:hover{
+color: #6C3600;
+background: url(./images/item-primary-bg.gif);
+background-repeat: no-repeat;
+background-position: center;
+}
+/*
+^'^ Secondary Items Container ^'^
+#nav-container div, #nav-container ul{
+padding:10px 4px 10px 4px;
+margin:0px 0px 0px 0px;
+background: url(./images/item-secondary-container-bg.jpg);
+background-repeat: repeat-x;
+background-color: #FF9900;
+border-bottom: 1px solid #CA6500;
+}
+
+^'^ Secondary Items ^'^
+#nav-container div a, #nav-container ul a{
+padding:3px 10px 3px 6px;
+background-color: #FFFFFF;
+background: url(./images/item-secondary-bg.jpg);
+background-repeat: no-repeat;
+background-position: 0px 22px;
+font-size:11px;
+border-width:0px;
+border-style:none;
+margin: 0px 0px 0px 0px;
+width: 149px;
+}
+
+^'^ Secondary Items Hover State ^'^
+#nav-container div a:hover, #nav-container ul a:hover{
+background-color: #FFFFFF;
+background: url(./images/item-secondary-bg.jpg);
+background-repeat: no-repeat;
+color:#CC0000;
+}
+
+^'^ Secondary Item Titles ^'^
+#nav-container .item-secondary-title{
+cursor:default;
+padding:4px 0px 3px 7px;
+color: black;
+font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+font-size:11px;
+ background: url(images/item-secondary-title-bg.jpg); 
+background-repeat: no-repeat;
+font-weight:bold;
+}*/
+
+/*^'^ Horizontal Dividers ^'^*/
+#nav-container .divider-horiz{
+border-top-width:1px;
+margin:5px 5px;
+border-color: #C16100;
+}
+
+/*^'^ Vertical Dividers ^'^*/
+#nav-container .divider-vert{
+border-left-width:1px;
+height:15px;
+margin:4px 2px 0px 2px;
+border-color:#AAAAAA;
+}
+#rightcontent .li{
+    list-style-image: url(./images/icon_calendar.gif);
+    color: black;
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:11px;
+}
+h4{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:14px;
+    color:black;
+    text-align:left;
+}
+h4.welcome{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:16px;
+    color:black;
+    text-align:center;
+}
+textarea.description{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:14px;
+    text-align:left;
+}
+
+/*p{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:12px;
+    text-align:left;
+}*/
+
+div.datepicker {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 196px;
+	height: 147px;
+	position: absolute;
+	cursor: default;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.datepickerContainer {
+	background: #121212;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.datepickerBorderT {
+	position: absolute;
+	left: 10px;
+	top: 0;
+	right: 10px;
+	height: 10px;
+	background: url(./images/datepicker_t.png);
+}
+.datepickerBorderB {
+	position: absolute;
+	left: 10px;
+	bottom: 0;
+	right: 10px;
+	height: 10px;
+	background: url(./images/datepicker_b.png);
+}
+.datepickerBorderL {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	top: 10px;
+	width: 10px;
+	background: url(./images/datepicker_l.png);
+}
+.datepickerBorderR {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	top: 10px;
+	width: 10px;
+	background: url(./images/datepicker_r.png);
+}
+.datepickerBorderTL {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: url(./images/datepicker_tl.png);
+}
+.datepickerBorderTR {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: url(./images/datepicker_tr.png);
+}
+.datepickerBorderBL {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: url(./images/datepicker_bl.png);
+}
+.datepickerBorderBR {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: url(./images/datepicker_br.png);
+}
+.datepickerHidden {
+	display: none;
+}
+div.datepicker table {
+	border-collapse:collapse;
+}
+div.datepicker a {
+	color: #eee;
+	text-decoration: none;
+	cursor: default;
+	outline: none;
+}
+div.datepicker table td {
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+div.datepicker th {
+	text-align: center;
+	color: #999;
+	font-weight: normal;
+}
+div.datepicker tbody th {
+	text-align: left;
+}
+div.datepicker tbody a {
+	display: block;
+}
+.datepickerDays a {
+	width: 20px;
+	line-height: 16px;
+	height: 16px;
+	padding-right: 2px;
+}
+.datepickerYears a,
+.datepickerMonths a{
+	width: 44px;
+	line-height: 36px;
+	height: 36px;
+	text-align: center;
+}
+td.datepickerNotInMonth a {
+	color: #666;
+}
+tbody.datepickerDays td.datepickerSelected{
+	background: #136A9F;
+}
+tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+	background: #17384d;
+}
+tbody.datepickerYears td.datepickerSelected,
+tbody.datepickerMonths td.datepickerSelected{
+	background: #17384d;
+}
+div.datepicker a:hover,
+div.datepicker a:hover {
+	color: #88c5eb;
+}
+div.datepicker td.datepickerNotInMonth a:hover {
+	color: #999;
+}
+div.datepicker tbody th {
+	text-align: left;
+}
+.datepickerSpace div {
+	width: 20px;
+}
+.datepickerGoNext a,
+.datepickerGoPrev a,
+.datepickerMonth a {
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+}
+.datepickerGoNext a {
+	float: right;
+	width: 20px;
+}
+.datepickerGoPrev a {
+	float: left;
+	width: 20px;
+}
+table.datepickerViewDays tbody.datepickerMonths,
+table.datepickerViewDays tbody.datepickerYears {
+	display: none;
+}
+table.datepickerViewMonths tbody.datepickerDays,
+table.datepickerViewMonths tbody.datepickerYears,
+table.datepickerViewMonths tr.datepickerDoW {
+	display: none;
+}
+table.datepickerViewYears tbody.datepickerDays,
+table.datepickerViewYears tbody.datepickerMonths,
+table.datepickerViewYears tr.datepickerDoW {
+	display: none;
+}
+td.datepickerDisabled a,
+td.datepickerDisabled.datepickerNotInMonth a{
+	color: #333;
+}
+td.datepickerDisabled a:hover {
+	color: #333;
+}
+td.datepickerSpecial a {
+	background: #700;
+}
+td.datepickerSpecial.datepickerSelected a {
+	background: #a00;
+}
