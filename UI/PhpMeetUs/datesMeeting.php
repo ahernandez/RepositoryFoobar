@@ -6,9 +6,9 @@ and open the template in the editor.
 <html>
     <?php
         $pagename = "datesMeeting.html";
+        setcookie("name", $_POST["fname"], time()+3600,"/","");
+        setcookie("desc", $_POST["fdesc"], time()+3600,"/","");
         require_once("./template/template.php");
-        echo $_POST["fname"];
-        echo $_POST["desc"];
     ?>
     
 

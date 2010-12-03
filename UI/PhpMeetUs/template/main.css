@@ -80,7 +80,7 @@ body{
 }
 #formdetails{
     width:70%;
-    margin-left: 80px;
+    margin-left: 20px;
 }
 #detailsnext{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
@@ -89,7 +89,7 @@ body{
     font-size: 16px;
     text-align:center;
     right: 10px;
-    margin-left: 209px;
+    margin-left: 10px;
 }
 #datesnext{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
@@ -125,7 +125,8 @@ body{
     padding:0;
     width:200px;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 #map {
     width: 500px;
@@ -250,6 +251,18 @@ left:100%;
 }
 
 /*^'^ Primary Items ^'^*/
+#nav-container div{
+padding:7px 17px 7px 18px;
+margin: 10px 0px 0px 0px;
+color: black;
+font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+font-size:14px;
+text-decoration:none;
+font-weight: bold;
+background: url(./images/item-primary-bg.gif);
+background-repeat: no-repeat;
+background-position: top;
+}
 #nav-container a{
 padding:7px 17px 7px 18px;
 margin: 10px 0px 0px 0px;

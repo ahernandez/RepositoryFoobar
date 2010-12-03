@@ -3,6 +3,7 @@ var mapLoaded = false;
 var map;
 var marker;
 var WINDOW_HTML;
+var datesArray;
 window.onload = function(){
 
     console.log('onload')
@@ -21,7 +22,12 @@ window.onload = function(){
         current: date_today,
         calendars: 1,
         mode: 'multiple',
-        starts: 1
+        starts: 1,
+        onChange: function(formated, dates){
+                console.log('%o %o ',formated, dates)
+                datesArray = formated;
+                $('#arrayDates').val(datesArray);
+	}
     });
 
     if (GBrowserIsCompatible() && !mapLoaded) {
@@ -43,8 +49,12 @@ window.onload = function(){
     }
 }
 
-function load() {
- 
+function sendposttoLocation() {
+    console.log('in')
+    console.log('%o',date)
+//    $.get("locationMeeting.php?dateArray=12222", {'dateArray' : 'qweqwe '}, function(data){
+//        console.log(data)
+//    });
 }
 function geocodeLocation(){
     console.log('geocoder location')

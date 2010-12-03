@@ -17,35 +17,34 @@ and open the template in the editor.
           type="text/javascript"></script>
         <script type="text/javascript" src="./template/main.js"></script>
          
-        
-<!--      <script type="text/javascript">-->
 
-<!--        </script>-->
     </head>
 
     <body>
         <div id="page">
             <img  alt="MeetUs"  src="../images/last_ban.png" />
             <div class="nav-container-outer">
-               <img src="./images/nav-bg-l2.jpg" alt="" class="float-left" />
-               <img src="./images/nav-bg-r2.jpg" alt="" class="float-right" />
+               <img src="./images/nav-bg-l.jpg" alt="" class="float-left" />
+               <img src="./images/nav-bg-r.jpg" alt="" class="float-right" />
                <ul id="nav-container" class="nav-container">
-                  <li><a class="item-primary" href="" target="_self">Meeting Details</a>                     </li>
+                   <li><a class="item-primary" href="index.php">Organize Meeting</a></li>
                    <li><span class="divider divider-vert" ></span></li>
-                  <li><a class="item-primary" href="" target="_self">Meeting Dates</a>
+                  <li><div class="item-primary">1.Details</div></li>
+                   <li><span class="divider divider-vert" ></span></li>
+                  <li><div class="item-primary">2.Dates</div>
                        </li>
                    <li><span class="divider divider-vert" ></span></li>
-                  <li><a class="item-primary" href="" target="_self">Meeting Location</a>
+                  <li><div class="item-primary">3.Location</div>
                        </li>
                    <li><span class="divider divider-vert" ></span></li>
-                  <li><a class="item-primary" href="" target="_self">Invite Friends</a>
+                  <li><div class="item-primary">4.Invite Friends</div>
                        </li>
                    <li><span class="divider divider-vert" ></span></li>
-                  <li><a class="item-primary" href="" target="_self">Finish</a>
+                  <li><div class="item-primary" >5.Finish</div>
                        </li>
-                   <li><span class="divider divider-vert" ></span></li>
+<!--                   <li><span class="divider divider-vert" ></span></li>
                   <li><a class="item-primary" href="" target="_self"></a>
-                       </li>
+                       </li>-->
                    <li><span class="divider divider-vert" ></span></li>
                   <li class="clear"> </li>
                </ul>
