@@ -2,14 +2,14 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 
-  <body onload="load()" onunload="GUnload()">
-      <form  action="" method="post">
-          <p>
-            <input id="formlocation" type="text" name="fname" size="45" maxlength="45" />
-           </p>
-          <p>
-          <input type="submit" id="looklocation" onClick="geocodeLocation()" value="Next"/>
-          </p>
+  <body >
+      <form action="friendsMeeting.php">
+          <div>
+            <input id="formlocation" name="location" type="text" name="fname" size="45" maxlength="45" />
+           </div>
+          <div>
+          <input type="button" id="looklocation" onClick="geocodeLocation()" value="Search"/>
+          </div>
       </form>
       <form  action="friendsMeeting.php" method="post">
         <div id="map"></div>

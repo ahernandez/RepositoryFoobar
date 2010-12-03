@@ -7,6 +7,10 @@ and open the template in the editor.
     <?php
         $pagename = "friendsMeeting.html";
         require_once("./template/template.php");
+        $nameMeeting = $_POST["fname"];
+        $description = $_POST["desc"];
+        echo $nameMeeting;
+        echo $description;
     ?>
 
 </html>

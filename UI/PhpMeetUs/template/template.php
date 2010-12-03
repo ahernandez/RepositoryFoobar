@@ -13,74 +13,14 @@ and open the template in the editor.
         <link href="./template/main.css" type="text/css" rel="stylesheet"></link>
          <script type="text/javascript" src="./datepicker/js/jquery.js"></script>
         <script type="text/javascript" src="./datepicker/js/datepicker.js"></script>
-        <script type="text/javascript">
-            window.onload = function(){
-            console.log('hello')
-            var d = new Date();
-            var curr_date = d.getDate();
-            var curr_month = d.getMonth();
-            curr_month++;
-            var curr_day = d.getDay();
-            var curr_year = d.getFullYear();
-
-            date_today = curr_year+'-'+curr_month+'-'+curr_date
-            //$('input').DatePicker(options);
-            $('#date3').DatePicker({
-            flat: true,
-            date: date_today,
-            current: date_today,
-            calendars: 1,
-            mode: 'multiple',
-            starts: 1
-                });
-            }
-        </script>
-         
         <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAA6lwyViQekds9mGHjmjo4WBSzpAXcQO8KK8MRp-27yMbl_lyiHBRk5dwpgdbBVP9gXNDRrCiu9kCuiw"
           type="text/javascript"></script>
-        <script type="text/javascript">
-        //<![CDATA[
-        var WINDOW_HTML = '';
-//        function initMap(){
-//	 mapa = new Map('mapa',{
-//			zoomlevel: 3,
-//			zoommin: 3,
-//			zoommax:15,
-//			tinyiconsmode: 8,
-//			startpoint: [36.954857,-94.75],
-//			clustermarkers: false
-//	});
-//	//var newIcon = new MapPointType('marcador');
-//	mapaAdmin = new formMap(mapa,{
-//			form_id:'solicitud',
-//			lat_input_id:'lat',
-//			lng_input_id:'lng'
-//	});
-//	mapaAdmin.execute();
-//	geocoder = new GClientGeocoder();
-//        }
-        function load() {
-          if (GBrowserIsCompatible()) {
-            var map = new GMap2(document.getElementById("map"));
-            map.addControl(new GSmallMapControl());
-            map.addControl(new GMapTypeControl());
-            map.setCenter(new GLatLng(53.343019,-6.248903), 13);
-            var marker = new GMarker(new GLatLng(53.343019,-6.248903));
-            map.addOverlay(marker);
-            GEvent.addListener(marker, "click", function() {
-            marker.openInfoWindowHtml(WINDOW_HTML);
-              });
-            marker.openInfoWindowHtml(WINDOW_HTML);
-            geocoder = new GClientGeocoder();
-          }
-        function geocodeLocation(){
-            var address = $('formlocation').value;
-            console.log(address)
-            geocoder.getLocations(address, geocodeCenter);
-        }
-        }
-        //]]>
-        </script>
+        <script type="text/javascript" src="./template/main.js"></script>
+         
+        
+<!--      <script type="text/javascript">-->
+
+<!--        </script>-->
     </head>
 
     <body>

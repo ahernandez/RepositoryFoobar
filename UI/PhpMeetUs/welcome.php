@@ -6,7 +6,6 @@ and open the template in the editor.
 <?php
 
 require './facebook/src/facebook.php';
-require '.facebook-connect-js-ec03d81/meta/all.js';
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
   'appId'  => '102810506459481',
@@ -43,7 +42,7 @@ if ($me) {
 }
 
 // This call will always work since we are fetching public data.
-$user = $facebook->api('/me');
+//$user = $facebook->api('/me');
 
 ?>
 <html>
@@ -55,11 +54,8 @@ $user = $facebook->api('/me');
         <p>
         
         </p>
-        <?php
-            $name = $user[id];
-            echo "<h4> Hello, <fb:name uid=\"$name\" useyou=\"false\"/>!</h4>";
-        ?>
-<!--        <h4 class="welcome"> Welcome to MeetUs!!</h4>-->
+ 
+        <h4 class="welcome"> Welcome to MeetUs!!</h4>
         <p>The most simply way to organize a meeting or an event!</p>
         <p>Click the button below to create a new meeting</p>
         <form method="link" action="formphpwebpage.php">

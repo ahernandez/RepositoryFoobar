@@ -101,6 +101,25 @@ body{
     margin-left: 190px;
     
 }
+#looklocation{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+
+}
+#locationbutton{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    color: black;
+    background-color: #FBB117;
+    font-size: 16px;
+    text-align:center;
+    right: 10px;
+    margin-left: 190px;
+
+}
 #date3 {
     margin:0;
     padding:0;
