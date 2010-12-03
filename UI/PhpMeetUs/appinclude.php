@@ -1,5 +1,5 @@
 <?php
-require_once ‘./facebook/src/facebook.php’;
+require_once './facebook/src/facebook.php';
 // *** Add your Facebook API Key, Secret Key, and Callback URL here *** 
 $appapikey = 'f0b3470dc1e813fc9fb41a88e536cddd';
 $appsecret = '8fa1aca969079a5a848de895d7cb5ee3';

@@ -14,23 +14,21 @@ and open the template in the editor.
     ?>
 
 <?php
-echo “<h1>Test</h1>”;
 
-/*
-require_once ‘appinclude.php’;
-echo “<h1>friends_get</h1>”;
-echo “<hr />”;
-echo “<pre>”;
-echo “<h2>Scenario 1: Getting all friends of current user</h2>”;
-echo “<h5>Raw output:</h5>”;
+require_once './appinclude.php';
+echo "<h1>friends_get</h1>";
+echo "<hr />";
+echo "<pre>";
+echo "<h2>Scenario 1: Getting all friends of current user</h2>";
+echo "<h5>Raw output:</h5>";
 print_r($facebook->api_client->friends_get());
-echo “<h5>Applied example:</h5>”;
-echo “<p>Friends of <fb:name uid=\”$user\” useyou=\”false\” />:</p>”;
+echo "<h5>Applied example:</h5>";
+echo "<p>Friends of <fb:name uid=\"$user\" useyou=\"false\" />:</p>";
 $friends = $facebook->api_client->friends_get();
-echo “<ul>”;
-foreach ($friends as $friend) {	echo “<li><fb:name uid=\”$friend\” useyou=\”false\” /></li>”;}
-echo “</ul>”;
-echo “</pre>”;
-*/
+echo "<ul>";
+foreach ($friends as $friend) {	echo "<li><fb:name uid=\"$friend\" useyou=\"false\" /></li>";}
+echo "</ul>";
+echo "</pre>";
+
 ?>
 </html>
