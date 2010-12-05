@@ -24,8 +24,8 @@ and open the template in the editor.
         <div id="page">
             <img  alt="MeetUs"  src="../images/last_ban.png" />
             <div class="nav-container-outer">
-               <img src="./images/nav-bg-l.jpg" alt="" class="float-left" />
-               <img src="./images/nav-bg-r.jpg" alt="" class="float-right" />
+<!--               <img src="./images/nav-bg-l.jpg" alt="" class="float-left" />
+               <img src="./images/nav-bg-r.jpg" alt="" class="float-right" />-->
                <ul id="nav-container" class="nav-container">
                    <li><a class="item-primary" href="index.php">Organize Meeting</a></li>
                    <li><span class="divider divider-vert" ></span></li>

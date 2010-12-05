@@ -4,9 +4,9 @@ define('NL', "\n");
 define('TB', '  ');
 
 function connectToMySql() {
-    $username = 'root'; //""
-    $password = 'root'; //""
-    $hostname = 'localhost'; // "127.0.0.1"
+    $username = "";
+    $password = "";
+    $hostname = "127.0.0.1";
     $dbh = mysql_connect($hostname, $username, $password)
             or die("Unable to connect to MySQL");
     print "Connected to MySQL<br>";

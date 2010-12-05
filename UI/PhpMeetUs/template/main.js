@@ -4,9 +4,13 @@ var map;
 var marker;
 var WINDOW_HTML;
 var datesArray;
+var coord;
+var latitude;
+var longitude;
+
 window.onload = function(){
 
-    console.log('onload')
+    //console.log('onload')
     var d = new Date();
     var curr_date = d.getDate();
     var curr_month = d.getMonth();
@@ -33,38 +37,59 @@ window.onload = function(){
     if (GBrowserIsCompatible() && !mapLoaded) {
         mapLoaded = true;
         WINDOW_HTML = '<div style="width: 210px;padding-right: 10px">Trinity College Dublin Ireland</div>';
-        console.log('load map')
+        //console.log('load map')
         map = new GMap2(document.getElementById("map"));
         map.addControl(new GSmallMapControl());
         map.addControl(new GMapTypeControl());
-        map.setCenter(new GLatLng(53.343019,-6.248903), 13);
-        marker = new GMarker(new GLatLng(53.343019,-6.248903));
+        //coord1 =;
+        map.setCenter( new GLatLng(53.343019,-6.248903), 13);
+        marker = new GMarker( new GLatLng(53.343019,-6.248903),{draggable: true});
         map.addOverlay(marker);
+//        latlong = marker.getLatLng();
+//        latitude = latlong.lat() +'';
+//        longitude = latlong.lng() +'';
+//        latlongStr = latitude +','+longitude;
+//        $('#longlat').val(latlongStr);
+        GEvent.addListener(marker, "dragstart", function() {
+            map.closeInfoWindow();
+        });
+
+        GEvent.addListener(marker, "dragend", function() {
+            marker.openInfoWindowHtml("Just bouncing along...");
+//            latlong = coordmarker.getLatLng();
+//            latitude = latlong.lat() +'';
+//            longitude = latlong.lng() +'';
+//            latlongStr = latitude +','+longitude;
+//            $('#longlat').val(latlongStr);
+        });
+        
+        
         GEvent.addListener(marker, "click", function() {
-            console.log('click')
+            //console.log('click')
             marker.openInfoWindowHtml(WINDOW_HTML);
         });
        marker.openInfoWindowHtml(WINDOW_HTML);
+       
         
     }
 }
 
-function sendposttoLocation() {
-    console.log('in')
-    console.log('%o',date)
-//    $.get("locationMeeting.php?dateArray=12222", {'dateArray' : 'qweqwe '}, function(data){
-//        console.log(data)
-//    });
-}
+//function sendposttoLocation() {
+//    //console.log('in')
+//    //console.log('%o',date)
+////    $.get("locationMeeting.php?dateArray=12222", {'dateArray' : 'qweqwe '}, function(data){
+////        console.log(data)
+////    });
+//}
 function geocodeLocation(){
-    console.log('geocoder location')
+   // console.log('geocoder location')
     var address = $('#formlocation').val();
     WINDOW_HTML = '<div style="width: 210px;padding-right: 10px">'+address+'</div>';
-    console.log(address)
+    //console.log(address)
     var geocoder = new GClientGeocoder();
     geocoder.getLocations(address, geocodeCenter);
     function geocodeCenter(response) {
-        console.log('geocode center')
+        //console.log('geocode center')
         if (!response || response.Status.code != 200) {
             alert("Place not found!");
         } else {
@@ -72,8 +97,13 @@ function geocodeLocation(){
             map.setCenter(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]), 13);
             marker = new GMarker(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]));
             map.addOverlay(marker);
+            latlong = coordmarker.getLatLng();
+            latitude = latlong.lat() +'';
+            longitude = latlong.lng() +'';
+            latlongStr = latitude +','+longitude;
+            $('#longlat').val(latlongStr);
             GEvent.addListener(marker, "click", function() {
-                console.log('click')
+                //console.log('click')
                 marker.openInfoWindowHtml(WINDOW_HTML);
         });
 
@@ -84,7 +114,7 @@ function geocodeLocation(){
 
 function centermap(lat, lon, zoom)
 {
-     console.log('center map %o', map);
+     //console.log('center map %o', map);
      map.setCenter(new GLatLng(lat, lon), zoom);
      if(map.newMarker == false)
      {

@@ -18,13 +18,13 @@ body{
 /*#rightcontent {
     background-color:#FBB117;
     border:2px solid #000000;
-    list-style-image: url(./images/calendar.png); 
+    list-style-image: url(./images/calendar.png);
     position:relative;
     top:1px;
     right:164px;
     padding:5px;
     line-height:12px;
- Again, the ugly brilliant hack. 
+ Again, the ugly brilliant hack.
     voice-family: "\"}\"";
     voice-family:inherit;
     width:23%;
@@ -59,7 +59,7 @@ body{
     width:172px;
     padding:5px;
     line-height:12px;
- Again, the ugly brilliant hack. 
+ Again, the ugly brilliant hack.
     voice-family: "\"}\"";
     voice-family:inherit;
     width:55%;
@@ -99,7 +99,7 @@ body{
     text-align:center;
     right: 10px;
     margin-left: 190px;
-    
+
 }
 #looklocation{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
@@ -322,7 +322,7 @@ padding:4px 0px 3px 7px;
 color: black;
 font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
 font-size:11px;
- background: url(images/item-secondary-title-bg.jpg); 
+ background: url(images/item-secondary-title-bg.jpg);
 background-repeat: no-repeat;
 font-weight:bold;
 }*/
@@ -382,6 +382,11 @@ div.datepicker {
 	top: 0;
 	left: 0;
 	display: none;
+}
+#date3 {
+    margin:0;
+    padding:0;
+    width:200px;
 }
 .datepickerContainer {
 	background: #121212;
@@ -482,10 +487,10 @@ div.datepicker tbody a {
 	display: block;
 }
 .datepickerDays a {
-	width: 20px;
+	width: 30px;
 	line-height: 16px;
-	height: 16px;
-	padding-right: 2px;
+	height: 26px;
+	padding-right: 1px;
 }
 .datepickerYears a,
 .datepickerMonths a{
