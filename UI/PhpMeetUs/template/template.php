@@ -61,26 +61,46 @@ and open the template in the editor.
                     <ul>
                         <h4>Meetings as a guest</h4>
                         <?php
-                        $arrayMeetings = array("Meeting1", "Meeting2", "Meeting3");
-                        $chuncks = array_chunk($arrayMeetings, 3);
-                        $count = count($chuncks);
-                        if ($count<=1){
-                            for($i = 0; $i < sizeof($arrayMeetings); ++$i){
-                                echo "<li>";
-                                echo "<a class=\"item".$i."\" href=\"\" target=\"_self\"></a>";
-                                echo "<p>".$arrayMeetings[$i]."</p>";
-                                echo "</li>";
+                            $arrayMeetings1 = array("Meeting1", "Meeting2xxxxxx", "Meeting3xxxxxxx");
+                            for($i = 0; $i < sizeof($arrayMeetings1); ++$i){
+                                $len = strlen($arrayMeetings1[$i]);
+                                if (25<$len){
+                                $arrayMeetings1[$i] = substr($arrayMeetings1[$i], 0, 21);
+                                $arrayMeetings1[$i] = $arrayMeetings1[$i]."...";
+                                }else{
+                                    $num =  25 - $len;
+                                    for ($j = 0; $j <= $num; ++$j){
+                                        $arrayMeetings1[$i] = $arrayMeetings1[$i]." ";
+                                    }
+                                }
                             }
-                        }
-
+                            echo "<select size=\"6\">";
+                            for($i = 0; $i < sizeof($arrayMeetings1); ++$i){
+                                echo "<option>".$arrayMeetings1[$i]."</option>";
+                            }
+                            echo "</select>";
                        ?>
                         <h4>Meetings as a admin</h4>
-                        <li><a class="item3" href="" target="_self"></a>
-                            <p>Conference Google</p>
-                        </li>
-                        <li><a class="item4" href="" target="_self"></a>
-                            <p>Business Meeting</p>
-                        </li>
+                        <?php
+                            $arrayMeetings2 = array("Meeting1", "Meeting2", "Meeting3");
+                            for($i = 0; $i < sizeof($arrayMeetings2); ++$i){
+                                $len = strlen($arrayMeetings2[$i]);
+                                if (25<$len){
+                                $arrayMeetings2[$i] = substr($arrayMeetings2[$i], 0, 21);
+                                $arrayMeetings2[$i] = $arrayMeetings2[$i]."...";
+                                }else{
+                                    $num =  25 - $len;
+                                    for ($j = 0; $j <= $num; ++$j){
+                                        $arrayMeetings2[$i] = $arrayMeetings2[$i]." ";
+                                    }
+                                }
+                            }
+                            echo "<select size=\"6\">";
+                            for($i = 0; $i < sizeof($arrayMeetings2); ++$i){
+                                echo "<option>".$arrayMeetings2[$i]."</option>";
+                            }
+                            echo "</select>";
+                       ?>
                     </ul>
                 </div>
          </div>
