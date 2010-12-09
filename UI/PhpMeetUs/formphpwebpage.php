@@ -8,7 +8,8 @@ and open the template in the editor.
     <?php
         $pagename = "formDetails.html";
         require_once("./template/template.php");
+        //session_start();
     ?>
-    <link href="./template/main.css" type="text/css" rel="stylesheet"></link>
+<!--    //<link href="./template/main.css" type="text/css" rel="stylesheet"></link>-->
     
 </html>

@@ -60,12 +60,20 @@ and open the template in the editor.
                 <div id="rightcontent">
                     <ul>
                         <h4>Meetings as a guest</h4>
-                        <li>
-                            <a class="item1" href="" target="_self"></a>
-                            <p>Leroy's Birthday Party</p>
-                        </li>
-                        <li><a class="item2" href="" target="_self"></a>
-                            <p>Football Match</p></li>
+                        <?php
+                        $arrayMeetings = array("Meeting1", "Meeting2", "Meeting3");
+                        $chuncks = array_chunk($arrayMeetings, 3);
+                        $count = count($chuncks);
+                        if ($count<=1){
+                            for($i = 0; $i < sizeof($arrayMeetings); ++$i){
+                                echo "<li>";
+                                echo "<a class=\"item".$i."\" href=\"\" target=\"_self\"></a>";
+                                echo "<p>".$arrayMeetings[$i]."</p>";
+                                echo "</li>";
+                            }
+                        }
+
+                       ?>
                         <h4>Meetings as a admin</h4>
                         <li><a class="item3" href="" target="_self"></a>
                             <p>Conference Google</p>

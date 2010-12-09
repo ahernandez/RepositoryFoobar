@@ -51,9 +51,7 @@ if ($me) {
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <p>
         
-        </p>
  
         <h4 class="welcome"> Welcome to MeetUs!!</h4>
         <p>The most simply way to organize a meeting or an event!</p>
@@ -64,5 +62,9 @@ if ($me) {
         <p>Panel on the right shows you all your Meetings:</p>
         <p>Guest: Give your available dates for the Meetings that you are invited!</p>
         <p>Admin: Check the status of your Meeting!</p>
+        <p>
+<!--        <img src="https://graph.facebook.com/<?php echo $uid; ?>/picture"><img/>-->
+        
+        </p>
     </body>
 </html>

@@ -7,7 +7,14 @@ and open the template in the editor.
     <?php
         $pagename = "friendsMeeting.html";
         require_once("./template/template.php");
-    
+        if(isset($_SESSION['location'])) {
+            $_SESSION['location']= $_POST["latlong"];
+            }
+        echo $_SESSION['name'];
+        echo $_SESSION['desc'];
+        echo $_SESSION['dates'];
+        echo $_SESSION['location'];
+        
        
     ?>
 

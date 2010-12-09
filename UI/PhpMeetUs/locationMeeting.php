@@ -6,9 +6,13 @@ and open the template in the editor.
 <html>
     <?php
         $pagename = "locationMeeting.html";
-        if(isset($_COOKIE['dates'])){
-            setcookie("dates", $_POST["arrayDates"], time()+3600,"/","");
-        }
+        if(isset($_SESSION['dates'])) {
+            $_SESSION['dates']= $_POST["arrayDates"];
+
+            }
+//        if(isset($_COOKIE['dates'])){
+//            setcookie("dates", $_POST["arrayDates"], time()+3600,"/","");
+//        }
 //       
 //        $array= $_POST["arrayDates"];
 //        echo $array;

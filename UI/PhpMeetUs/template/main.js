@@ -22,13 +22,13 @@ window.onload = function(){
     //$('input').DatePicker(options);
     $('#date3').DatePicker({
         flat: true,
-        date: date_today,
+        date: '',
         current: date_today,
         calendars: 1,
         mode: 'multiple',
         starts: 1,
         onChange: function(formated, dates){
-                console.log('%o %o ',formated, dates)
+                //console.log('%o %o ',formated, dates)
                 datesArray = formated;
                 $('#arrayDates').val(datesArray);
 	}
@@ -45,22 +45,22 @@ window.onload = function(){
         map.setCenter( new GLatLng(53.343019,-6.248903), 13);
         marker = new GMarker( new GLatLng(53.343019,-6.248903),{draggable: true});
         map.addOverlay(marker);
-//        latlong = marker.getLatLng();
-//        latitude = latlong.lat() +'';
-//        longitude = latlong.lng() +'';
-//        latlongStr = latitude +','+longitude;
-//        $('#longlat').val(latlongStr);
+        latlong = marker.getLatLng();
+        latitude = latlong.lat() +'';        
+        longitude = latlong.lng() +'';
+        latlongStr = latitude +','+longitude;
+        console.log(latlongStr);
+        $('#latlong').val(latlongStr);
         GEvent.addListener(marker, "dragstart", function() {
             map.closeInfoWindow();
         });
 
         GEvent.addListener(marker, "dragend", function() {
-            marker.openInfoWindowHtml("Just bouncing along...");
-//            latlong = coordmarker.getLatLng();
-//            latitude = latlong.lat() +'';
-//            longitude = latlong.lng() +'';
-//            latlongStr = latitude +','+longitude;
-//            $('#longlat').val(latlongStr);
+            latlong = marker.getLatLng();
+            latitude = latlong.lat() +'';
+            longitude = latlong.lng() +'';
+            latlongStr = latitude +','+longitude;
+            $('#latlong').val(latlongStr);
         });
         
         
@@ -74,13 +74,6 @@ window.onload = function(){
     }
 }
 
-//function sendposttoLocation() {
-//    //console.log('in')
-//    //console.log('%o',date)
-////    $.get("locationMeeting.php?dateArray=12222", {'dateArray' : 'qweqwe '}, function(data){
-////        console.log(data)
-////    });
-//}
 function geocodeLocation(){
    // console.log('geocoder location')
     var address = $('#formlocation').val();
@@ -95,13 +88,25 @@ function geocodeLocation(){
         } else {
             place = response.Placemark[0];
             map.setCenter(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]), 13);
-            marker = new GMarker(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]));
+            marker = new GMarker(new GLatLng(place.Point.coordinates[1],place.Point.coordinates[0]),{draggable: true});
             map.addOverlay(marker);
-            latlong = coordmarker.getLatLng();
+            latlong = marker.getLatLng();
             latitude = latlong.lat() +'';
             longitude = latlong.lng() +'';
             latlongStr = latitude +','+longitude;
-            $('#longlat').val(latlongStr);
+            console.log(latlongStr);
+            $('#latlong').val(latlongStr);
+                GEvent.addListener(marker, "dragstart", function() {
+                map.closeInfoWindow();
+            });
+
+            GEvent.addListener(marker, "dragend", function() {
+                latlong = marker.getLatLng();
+                latitude = latlong.lat() +'';
+                longitude = latlong.lng() +'';
+                latlongStr = latitude +','+longitude;
+                $('#latlong').val(latlongStr);
+            });
             GEvent.addListener(marker, "click", function() {
                 //console.log('click')
                 marker.openInfoWindowHtml(WINDOW_HTML);

@@ -7,7 +7,7 @@ and open the template in the editor.
         <?php
         $pagename = "welcome.php";
         require_once("./template/template.php");
+        
     ?>
-<!--    <link href="./template/main.css" type="text/css" rel="stylesheet"></link>-->
 
 </html>
