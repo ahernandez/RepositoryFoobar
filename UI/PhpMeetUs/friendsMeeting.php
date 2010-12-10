@@ -19,7 +19,7 @@ and open the template in the editor.
     ?>
 
 <?php
-require '../src/facebook.php';
+require './facebook/src/facebook.php';
 
 $facebook = new Facebook(array(
   'appId'  => '102810506459481',
