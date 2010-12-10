@@ -5,7 +5,7 @@ and open the template in the editor.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <?php
-        $pagename = "friendsMeeting.html";
+        $pagename = "friendsMeeting.php";
         require_once("./template/template.php");
         if(isset($_SESSION['location'])) {
             $_SESSION['location']= $_POST["latlong"];
@@ -18,9 +18,9 @@ and open the template in the editor.
        
     ?>
     
-
+<!--
 <div id="leftcontent">
-<body>
+<body>-->
 <?php
 require './facebook/src/facebook.php';
 
@@ -86,6 +86,7 @@ else {
   error_log($e);
 }
 ?>
+<!--
 </body>
-</div>
+</div>-->
 </html>
