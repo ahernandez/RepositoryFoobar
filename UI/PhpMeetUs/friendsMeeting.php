@@ -17,8 +17,10 @@ and open the template in the editor.
         
        
     ?>
-<div id="leftcontent"> 
-<body> 
+    
+
+<div id="leftcontent">
+<body>
 <?php
 require './facebook/src/facebook.php';
 
