@@ -17,7 +17,8 @@ and open the template in the editor.
         
        
     ?>
-
+<div id="leftcontent"> 
+<body> 
 <?php
 require './facebook/src/facebook.php';
 
@@ -49,7 +50,7 @@ else {
   
   ?>
 
-  <form action="test.php">
+  <form action="friendsMeeting.php">
   <div style="width:300px;height:300px;overflow:auto;"> 
   <input type="hidden" name="envoi" value="yes"> 
   <?php
@@ -83,5 +84,6 @@ else {
   error_log($e);
 }
 ?>
-
+</body>
+</div>
 </html>
