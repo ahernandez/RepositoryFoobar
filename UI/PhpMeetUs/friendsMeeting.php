@@ -138,7 +138,7 @@ and open the template in the editor.
  			'picture'=> 'http://economy.ocregister.com/files/2009/02/calendar-300x224.jpg',
 		);
 		$fb_feed_publish = $facebook->api("/$uid/feed", 'POST', $attachment); //$uid
-			echo '<p> Invitation send to uid = '.$uid.'</p>';
+			echo '<p> Invitation sent to uid = '.$uid.'</p>';
 		}
 	
 	?>
