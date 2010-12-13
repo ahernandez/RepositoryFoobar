@@ -159,7 +159,7 @@ class Facebook
   /**
    * Indicates if Cookie support should be enabled.
    */
-  protected $cookieSupport = true;
+  protected $cookieSupport = false;
 
   /**
    * Base domain for the Cookie.

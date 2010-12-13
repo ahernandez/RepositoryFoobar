@@ -17,7 +17,7 @@ and open the template in the editor.
 //        $array= $_POST["arrayDates"];
 //        echo $array;
 //        echo $_COOKIE["name"];
-        require_once("./template/template.php");
+        require_once("./template/template2.php");
     ?>
     
 

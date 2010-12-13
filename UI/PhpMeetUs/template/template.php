@@ -37,7 +37,7 @@ and open the template in the editor.
                   <li><div class="item-primary">3.Location</div>
                        </li>
                    <li><span class="divider divider-vert" ></span></li>
-                  <li><div class="item-primary">4.Invite Friends</div>
+                  <li><div class="item-primary">4.Friends</div>
                        </li>
                    <li><span class="divider divider-vert" ></span></li>
                   <li><div class="item-primary" >5.Finish</div>
@@ -57,6 +57,9 @@ and open the template in the editor.
                     include($pagename);
                     ?>
                 </div>
+                <?php
+                //if p
+                ?>
                 <div id="rightcontent">
                     <ul>
                         <h4>Meetings as a guest</h4>

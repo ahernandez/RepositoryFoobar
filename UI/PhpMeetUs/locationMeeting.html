@@ -2,18 +2,19 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 
-  <body >
+      <h4 class="title"> Enter the location</h4>
+      <h4 class="explainFriends"> Type in the box the place you are looking for and click Search Button</h4>
       <div>
-      <form action="friendsMeeting.php">
+      <form action="">
         <input type="text" id="formlocation" name="location" name="fname" size="45" maxlength="45" />
         <input type="button" id="looklocation" onClick="geocodeLocation()" value="Search"/>
       </form>
       </div>
-      <form  action="friendsMeeting.php" method="post">
+      <form  action="friendsMeeting2.php" method="post">
         <div id="map"></div>
         <p>
         <input type="text" id="latlong" name="latlong" size="45" maxlength="67" />
         <input type="submit" id="detailsnext" value="Next"/>
          </p>
       </form>
-  </body>
+ 

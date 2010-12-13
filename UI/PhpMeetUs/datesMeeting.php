@@ -6,15 +6,16 @@ and open the template in the editor.
 <html>
     <?php
         $pagename = "datesMeeting.html";
-
-        if(isset($_SESSION['name'])) {
-            $_SESSION['name']= $_POST["fname"];
-            
-            }
-        if (isset($_SESSION['desc'])){
-            $_SESSION['desc']= $_POST["fdesc"];
-        }
-        require_once("./template/template.php");
+//        print_r($_REQUEST);
+//        print_r($_POST);
+//        if(isset($_SESSION['name'])) {
+//            $_SESSION['name']= $_POST["fname"];
+//
+//            }
+//        if (isset($_SESSION['desc'])){
+//            $_SESSION['desc']= $_POST["fdesc"];
+//        }
+        require_once("./template/template2.php");
     ?>
     
 

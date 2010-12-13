@@ -7,6 +7,7 @@ var datesArray;
 var coord;
 var latitude;
 var longitude;
+var friendsSelectedIds  =   '';
 
 window.onload = function(){
 
@@ -37,7 +38,6 @@ window.onload = function(){
     if (GBrowserIsCompatible() && !mapLoaded) {
         mapLoaded = true;
         WINDOW_HTML = '<div style="width: 210px;padding-right: 10px">Trinity College Dublin Ireland</div>';
-        //console.log('load map')
         map = new GMap2(document.getElementById("map"));
         map.addControl(new GSmallMapControl());
         map.addControl(new GMapTypeControl());
@@ -129,3 +129,4 @@ function centermap(lat, lon, zoom)
              map.updateInputs();
      }
 }
+

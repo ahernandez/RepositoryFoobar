@@ -1,6 +1,6 @@
 <?php
 
-require '../src/facebook.php';
+require './facebook/src/facebook.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
@@ -9,13 +9,13 @@ $facebook = new Facebook(array(
   'cookie' => true,
 ));
 
-// We may or may not have this data based on a $_GET or $_COOKIE based session.
+//ay or may not have this data based on a $_GET or $_COOKIE based session.
 //
 // If we get a session here, it means we found a correctly signed session using
 // the Application Secret only Facebook and the Application know. We dont know
 // if it is still valid until we make an API call using the session. A session
 // can become invalid if it has already expired (should not be getting the
-// session back in this case) or if the user logged out of Facebook.
+// session back in this case) or if the user logged out of Facebook.// We m
 $session = $facebook->getSession();
 
 $me = null;
@@ -37,7 +37,7 @@ if ($me) {
 }
 
 // This call will always work since we are fetching public data.
-$user = $facebook->api('/me');
+//$naitik = $facebook->api('/asanmamed');
 
 ?>
 <!doctype html>
@@ -122,6 +122,6 @@ $user = $facebook->api('/me');
 
     <h3>Naitik</h3>
     <img src="https://graph.facebook.com/naitik/picture">
-    <?php echo $user['name']; ?>
+    <?php echo $naitik['name']; ?>
   </body>
 </html>

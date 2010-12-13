@@ -9,28 +9,13 @@ body{
     height: 100%;
     margin: 0px auto;
     padding: 0px;
-    width: 70%;
+    width: 100%;
     float: left;
 }
 #mainframe {
     height: 100%;
 }
-/*#rightcontent {
-    background-color:#FBB117;
-    border:2px solid #000000;
-    list-style-image: url(./images/calendar.png);
-    position:relative;
-    top:1px;
-    right:164px;
-    padding:5px;
-    line-height:12px;
- Again, the ugly brilliant hack.
-    voice-family: "\"}\"";
-    voice-family:inherit;
-    width:23%;
-    float: right;
-    height: 100%;
-}*/
+
 #rightcontent {
     background-color:#4FACFF;
     border:0 solid #000000;
@@ -49,23 +34,14 @@ body{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
     font-size:14px;
 }
-/*
-#leftcontent {
-    background-color:#FFFFFF;
-    border:2px solid #000000;
-    position:relative;
-    top:1px;
-    right:0px;
-    width:172px;
-    padding:5px;
-    line-height:12px;
- Again, the ugly brilliant hack.
-    voice-family: "\"}\"";
-    voice-family:inherit;
-    width:55%;
-    float: left;
-    height: 100%;
-}*/
+#friends{
+    font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:10px;
+    width:300px;
+    height:300px;
+    overflow:auto;
+}
+
 #leftcontent {
     background-color:#FFFFFF;
     border:0px solid #000000;
@@ -78,9 +54,21 @@ body{
     voice-family:inherit;
     width:92%;
 }
+/*#leftcontent2 {
+    background-color:#FFFFFF;
+    border:0px solid #000000;
+    float:left;
+    height:49%;
+    line-height:12px;
+    padding:5px;
+    position:relative;
+    right:0;
+    voice-family:inherit;
+    width:100%;
+}*/
 #formdetails{
     width:70%;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 #detailsnext{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
@@ -148,14 +136,15 @@ body{
     right: 10px;
 
 }
-/*#leftcontent input.next{
+#leftcontent input.searchbutton{
     font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
     color: black;
     background-color: #FBB117;
     font-size: 16px;
     text-align:center;
     right: 10px;
-}*/
+
+}
 
 /*^'^ Navigation Structure ^'^*/
 .nav-container-outer{
@@ -357,7 +346,25 @@ h4.welcome{
     font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
     font-size:16px;
     color:black;
-    text-align:center;
+    text-align:left;
+}
+h4.finished{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:16px;
+    color:black;
+    text-align:left;
+}
+h4.title{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:16px;
+    color:black;
+    text-align:left;
+}
+h4.explainFriends{
+    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+    font-size:10px;
+    color:black;
+    text-align:left;
 }
 textarea.description{
     font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
@@ -365,11 +372,7 @@ textarea.description{
     text-align:left;
 }
 
-/*p{
-    font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
-    font-size:12px;
-    text-align:left;
-}*/
+
 
 div.datepicker {
 	position: relative;
@@ -567,3 +570,43 @@ td.datepickerSpecial a {
 td.datepickerSpecial.datepickerSelected a {
 	background: #a00;
 }
+    div.scroll {
+        height: 160px;
+        width: 200px;
+        overflow: auto;
+        border: 1px solid #666;
+        padding: 8px;
+    }
+
+    #listwords{
+        border: 1px solid #BDBABD;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #listwords ul{
+        list-style: none;
+        margin-top: -3px;
+        cursor: pointer;
+    }
+
+    #listwords span{
+        color: olive;
+        text-decoration: none;
+    }
+
+    .itemselect{
+        background-color: #e2dfaf;
+        color: #650202;
+    }
+
+    .itemmouseover{
+        background-color: #FFEEBB;
+        color: BLACK;
+    }
+
+    .itemnormal{
+        color: BLACK;
+        font-family: arial;
+        font-size: 12px;
+    }

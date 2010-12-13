@@ -7,8 +7,10 @@ and open the template in the editor.
     
     <?php
         $pagename = "formDetails.html";
-        require_once("./template/template.php");
+        require_once("./template/template2.php");
         //session_start();
+//        print_r($_REQUEST);
+//        print_r($_POST);
     ?>
 <!--    //<link href="./template/main.css" type="text/css" rel="stylesheet"></link>-->
     
